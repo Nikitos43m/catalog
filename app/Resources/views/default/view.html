@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        {% for authors in authors %}
+     <table>
+        
+         <tr>
+             <td> {{ authors.name }}</td>
+             <td> <a href="{{ path("books_catalog", {"id": authors.id}) }}">список книг</a></td>
+             <td> <a href="{{ path("author_update", {"id": authors.id}) }}">редактировать</a></td>   
+         </tr>
+         
+     </table>
+        {% endfor %}
+        <br>
+        <a href="{{ path("author_create") }}">Добавить автора</a>
+    </body>
+</html>
