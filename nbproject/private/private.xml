@@ -7,6 +7,7 @@
             <file>file:/usr/local/bin/my_app/src/AppBundle/Entity/authors.php</file>
             <file>file:/usr/local/bin/my_app/app/Resources/views/default/view.html</file>
             <file>file:/usr/local/bin/my_app/src/AppBundle/Controller/DefaultController.php</file>
+            <file>file:/usr/local/bin/my_app/src/AppBundle/Entity/books.php</file>
             <file>file:/usr/local/bin/my_app/app/Resources/views/default/author_form.html</file>
         </group>
     </open-files>

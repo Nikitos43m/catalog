@@ -1,27 +1,31 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" 
+         href="{{ asset('bower_components/bootstrap/dist/css/bootstrap.min.css') }}" type="text/css" media="all">
     </head>
-    <body>
+ <body>
          
-        {% for books in books %}
-     <table>
+  <div class="container">
+      <div class="col-xs-12 col-md-8">    
+        <br>
+          <table class="table table-bordered">
             
-         <tr>
-             <td> {{ books.title }}</td>
-             <td><a href="{{ path("book_update", {"id": books.id}) }}">редактировать</a></td><td><a href="{{ path("book_delete", {"id": books.id}) }}">удалить</a></td>
-             
-         </tr>
-         
-     </table>
-        {% endfor %}
-    </body>
+              {% for books in books %}
+              <tr>
+                  <td> 
+                      {{ books.title }}
+                  </td>
+                  <td width="50%">
+                      <a href="{{ path("book_update", {"id": books.id}) }}">редактировать</a>
+                      <a class="glyphicon glyphicon-trash" href="{{ path("book_delete", {"id": books.id}) }}"></a>
+                  </td>           
+              </tr>
+               {% endfor %}
+            
+          </table>
+      </div>
+  </div>     
+
+</body>
 </html>

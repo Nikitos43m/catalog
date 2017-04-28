@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "61be8d644d5ca02c2ee4e99e79050d32",
+    "content-hash": "c2c9d6f7d63812f651b4056cc8d928ba",
     "packages": [
         {
             "name": "ali/datatable",
@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/AliHichem/AliDatatableBundle.git",
-                "reference": "6378ed97ac217c10860dffc72ce39a24f17820b2"
+                "reference": "cfba42cc0e9057e74c7155b1dfaa5e1198585b08"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/AliHichem/AliDatatableBundle/zipball/6378ed97ac217c10860dffc72ce39a24f17820b2",
-                "reference": "6378ed97ac217c10860dffc72ce39a24f17820b2",
+                "url": "https://api.github.com/repos/AliHichem/AliDatatableBundle/zipball/cfba42cc0e9057e74c7155b1dfaa5e1198585b08",
+                "reference": "cfba42cc0e9057e74c7155b1dfaa5e1198585b08",
                 "shasum": ""
             },
             "require": {
@@ -51,7 +51,47 @@
                 "datatable",
                 "jquery"
             ],
-            "time": "2016-03-30 23:07:59"
+            "time": "2017-04-25 15:14:59"
+        },
+        {
+            "name": "components/jquery",
+            "version": "3.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/components/jquery.git",
+                "reference": "09a1658378bc1f818856086396ebeab7d0ec2276"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/components/jquery/zipball/09a1658378bc1f818856086396ebeab7d0ec2276",
+                "reference": "09a1658378bc1f818856086396ebeab7d0ec2276",
+                "shasum": ""
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "jquery.js"
+                    ],
+                    "files": [
+                        "jquery.min.js",
+                        "jquery.min.map"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "John Resig",
+                    "email": "jeresig@gmail.com"
+                }
+            ],
+            "description": "jQuery JavaScript Library",
+            "homepage": "http://jquery.com",
+            "time": "2016-09-23T06:06:29+00:00"
         },
         {
             "name": "composer/ca-bundle",

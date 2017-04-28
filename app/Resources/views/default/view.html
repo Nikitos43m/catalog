@@ -1,29 +1,31 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" 
+         href="{{ asset('bower_components/bootstrap/dist/css/bootstrap.min.css') }}" type="text/css" media="all">
+
     </head>
-    <body>
-        
-        {% for authors in authors %}
-     <table>
-        
-         <tr>
-             <td> {{ authors.name }}</td>
-             <td> <a href="{{ path("books_catalog", {"id": authors.id}) }}">список книг</a></td>
-             <td> <a href="{{ path("author_update", {"id": authors.id}) }}">редактировать</a></td>   
-         </tr>
-         
-     </table>
-        {% endfor %}
+    
+<body>
+    <div class="container">
+        <div class="col-xs-12 col-md-8"> 
+            <br>
+            <table class="table table-striped">
+            {% for authors in authors %}
+                <tr>
+                     <td> 
+                         {{ authors.name }}
+                     </td>
+                     <td width="50%"> 
+                         <a class = "btn btn-default" href="{{ path("books_catalog", {"id": authors.id}) }}">список книг</a>
+                         <a class="btn btn-default" href="{{ path("author_update", {"id": authors.id}) }}">редактировать</a>
+                     </td>   
+                </tr>
+            {% endfor %}
+            </table> 
         <br>
-        <a href="{{ path("author_create") }}">Добавить автора</a>
-    </body>
+        <a class="btn btn-success" href="{{ path("author_create") }}">Добавить автора</a>
+        </div> 
+    </div> 
+</body>
 </html>
