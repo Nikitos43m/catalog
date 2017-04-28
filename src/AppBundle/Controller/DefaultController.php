@@ -17,10 +17,6 @@ class DefaultController extends Controller
      */
     public function indexAction() 
     {
-        $em = $this->getDoctrine()->getManager();
-        
-        $qb = $em->createQueryBuilder();
-         
         $authors = $this->getDoctrine()
                         ->getRepository(\AppBundle\Entity\Author::class)
                         ->findAll();
@@ -152,9 +148,12 @@ class DefaultController extends Controller
                       ->getRepository(\AppBundle\Entity\Book::class)
                       ->find($id);
 
-         $em = $this->getDoctrine()->getManager();
-         $em->remove($book);
-         $em->flush();
+//        $author = $book->getAuthor();
+//        $author->removeBook($book);
+         
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($book);
+        $em->flush();
          
          $id_auth = $book->getAuthor()->getId();
          
